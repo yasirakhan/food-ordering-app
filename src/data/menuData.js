@@ -1,8 +1,137 @@
+// Menu data array containing details of various food and beverage items
 const menuData = [
-    { id: 1, name: "Spicy Mango Burger", category: "Mains", price: 7.99, image: require('../assets/images/spicy-mango-burger.jpg'), description: "A juicy burger with a mango-chili twist." },
-    { id: 2, name: "Crispy Lotus Fries", category: "Appetizers", price: 4.49, image: require('../assets/images/crispy-lotus-fries.jpg'), description: "Golden fries with a hint of lotus root." },
-    { id: 3, name: "Honeydew Sorbet", category: "Desserts", price: 3.99, image: require('../assets/images/honeydew-sorbet.jpg'), description: "Refreshing sorbet with a sweet honeydew base." },
-    { id: 4, name: "Tamarind Chicken", category: "Mains", price: 9.49, image: require('../assets/images/tamarind-chicken.jpg'), description: "Tangy chicken marinated in tamarind sauce." }
-  ];
-  
-  export default menuData;
+    {
+        id: 1, // Unique identifier for the item
+        name: "Spicy Mango Burger", // Name of the dish
+        category: "Mains", // Category type (e.g., Mains, Appetizers, Desserts, Beverages)
+        price: 7.99, // Price of the item in USD
+        image: require('../assets/images/spicy-mango-burger.jpg'), // Image path
+        description: "A juicy burger with a mango-chili twist.", // Short description of the dish
+        ingredients: "Beef patty, mango-chili sauce, lettuce, tomato, cheddar cheese, brioche bun", // List of ingredients
+        calories: 650, // Caloric content of the dish
+        prepTime: "15 minutes", // Estimated preparation time
+    },
+    {
+        id: 2,
+        name: "Crispy Lotus Fries",
+        category: "Appetizers",
+        price: 4.49,
+        image: require('../assets/images/crispy-lotus-fries.jpg'),
+        description: "Golden fries with a hint of lotus root.",
+        ingredients: "Lotus root, potato, sea salt, paprika",
+        calories: 300,
+        prepTime: "10 minutes",
+    },
+    {
+        id: 3,
+        name: "Honeydew Sorbet",
+        category: "Desserts",
+        price: 3.99,
+        image: require('../assets/images/honeydew-sorbet.jpg'),
+        description: "Refreshing sorbet with a sweet honeydew base.",
+        ingredients: "Honeydew melon, sugar, lemon juice, water",
+        calories: 150,
+        prepTime: "5 minutes",
+    },
+    {
+        id: 4,
+        name: "Tamarind Chicken",
+        category: "Mains",
+        price: 9.49,
+        image: require('../assets/images/tamarind-chicken.jpg'),
+        description: "Tangy chicken marinated in tamarind sauce.",
+        ingredients: "Chicken breast, tamarind paste, garlic, soy sauce, brown sugar",
+        calories: 500,
+        prepTime: "20 minutes",
+    },
+    {
+        id: 5,
+        name: "Garlic Butter Shrimp",
+        category: "Mains",
+        price: 12.99,
+        image: require('../assets/images/garlic-butter-shrimp.jpg'),
+        description: "Succulent shrimp sautéed in garlic butter sauce.",
+        ingredients: "Shrimp, butter, garlic, parsley, lemon juice",
+        calories: 400,
+        prepTime: "15 minutes",
+    },
+    {
+        id: 6,
+        name: "Vegetable Spring Rolls",
+        category: "Appetizers",
+        price: 5.49,
+        image: require('../assets/images/vegetable-spring-rolls.jpg'),
+        description: "Crispy rolls filled with fresh vegetables.",
+        ingredients: "Cabbage, carrots, bell peppers, spring roll wrappers, soy sauce",
+        calories: 200,
+        prepTime: "12 minutes",
+    },
+    {
+        id: 7,
+        name: "Mango Sticky Rice",
+        category: "Desserts",
+        price: 4.99,
+        image: require('../assets/images/mango-sticky-rice.jpg'),
+        description: "Sweet sticky rice topped with fresh mango.",
+        ingredients: "Sticky rice, mango, coconut milk, sugar",
+        calories: 350,
+        prepTime: "25 minutes",
+    },
+    {
+        id: 8,
+        name: "Lemongrass Beef Skewers",
+        category: "Mains",
+        price: 10.99,
+        image: require('../assets/images/lemongrass-beef-skewers.jpg'),
+        description: "Grilled beef skewers with a lemongrass marinade.",
+        ingredients: "Beef, lemongrass, garlic, fish sauce, sugar",
+        calories: 450,
+        prepTime: "20 minutes",
+    },
+    {
+        id: 9,
+        name: "Coconut Water Cooler",
+        category: "Beverages",
+        price: 3.49,
+        image: require('../assets/images/coconut-water-cooler.jpg'),
+        description: "Chilled coconut water with a hint of lime.",
+        ingredients: "Coconut water, lime juice, mint leaves",
+        calories: 60,
+        prepTime: "5 minutes",
+    },
+    {
+        id: 10,
+        name: "Spicy Edamame",
+        category: "Appetizers",
+        price: 4.99,
+        image: require('../assets/images/spicy-edamame.jpg'),
+        description: "Steamed edamame tossed in a spicy chili sauce.",
+        ingredients: "Edamame, chili sauce, garlic, sesame oil",
+        calories: 180,
+        prepTime: "8 minutes",
+    },
+    {
+        id: 11,
+        name: "Passion Fruit Cheesecake",
+        category: "Desserts",
+        price: 5.99,
+        image: require('../assets/images/passion-fruit-cheesecake.jpg'),
+        description: "Creamy cheesecake with a tangy passion fruit topping.",
+        ingredients: "Cream cheese, graham cracker crust, passion fruit, sugar",
+        calories: 400,
+        prepTime: "30 minutes",
+    },
+    {
+        id: 12,
+        name: "Hibiscus Iced Tea",
+        category: "Beverages",
+        price: 2.99,
+        image: require('../assets/images/hibiscus-iced-tea.jpg'),
+        description: "Refreshing iced tea with a floral hibiscus flavor.",
+        ingredients: "Hibiscus flowers, water, sugar, lemon",
+        calories: 50,
+        prepTime: "10 minutes",
+    },
+];
+
+export default menuData;
