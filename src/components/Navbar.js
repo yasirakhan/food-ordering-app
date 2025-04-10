@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';// Importing Link for navigation  
 import { useContext } from 'react';// Importing useContext to access context values  
 import { CartContext } from '../contexts/CartContext';// Importing CartContext for cart data  
-import { useCart } from '../contexts/CartContext';// Alternative way to use cart context  
+// import { useCart } from '../contexts/CartContext';// Alternative way to use cart context  
 import { useUser } from '../contexts/UserContext';// Importing UserContext to manage authentication  
 
 function Navbar() {

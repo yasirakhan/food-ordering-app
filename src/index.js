@@ -21,8 +21,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 // Render the app into the DOM
 root.render(
     // Wrap the app in React.StrictMode for development checks
-    <React.StrictMode>
-        // Render the main App component
+    // Render the main App component
+    <React.StrictMode>        
         <App />
     </React.StrictMode>
 );

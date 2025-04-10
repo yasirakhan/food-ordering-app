@@ -32,7 +32,6 @@ function ConfirmationPage() {
     const [currentOrder, setCurrentOrder] = useState(null);
 
     // useRef to store the interval ID for polling order updates, allowing cleanup on unmount
-    // Ref to track the interval ID for polling
     const intervalRef = useRef(null);
 
     //   const handleBackToHome = () => {

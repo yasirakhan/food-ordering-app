@@ -1,6 +1,6 @@
 // Importing necessary dependencies from React Router for routing
 // Router for routing, Route for defining routes, Routes for grouping routes, Navigate for redirection
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'; 
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 
 // Importing the Navbar component for navigation
 import Navbar from './components/Navbar'; // Navbar component for the app's navigation bar
@@ -13,10 +13,8 @@ import LoginPage from './pages/LoginPage'; // LoginPage component for the login 
 import HistoryPage from './pages/HistoryPage'; // HistoryPage component for the order history page
 
 // Importing context providers for cart and user state management
-// CartProvider to provide cart-related state and functions to the app
-import { CartProvider } from './contexts/CartContext'; 
-// UserProvider to provide user-related state and functions, useUser to access user state
-import { UserProvider, useUser } from './contexts/UserContext'; 
+import { CartProvider } from './contexts/CartContext'; // CartProvider to provide cart-related state and functions to the app
+import { UserProvider, useUser } from './contexts/UserContext'; // UserProvider to provide user-related state and functions, useUser to access user state
 
 // Importing ToastContainer for toast notifications
 import { ToastContainer } from 'react-toastify'; // ToastContainer for displaying toast notifications throughout the app
@@ -32,47 +30,35 @@ Modal.setAppElement('#root'); // Bind Modal to the root element to ensure proper
 
 // ProtectedRoute component: Protects routes by redirecting unauthenticated users to the login page
 function ProtectedRoute({ children }) {
-    // Access the current user from UserContext
-    const { user } = useUser(); // Get the user state (null if not logged in)
-    
-    // Conditionally render the children (protected content) or redirect to the login page
-    return user ? children : <Navigate to="/login" />; // If user is logged in, render the children; otherwise, redirect to /login
+  // Access the current user from UserContext
+  const { user } = useUser(); // Get the user state (null if not logged in)
+
+  // Conditionally Rendering the children (protected content) or redirect to the login page
+  return user ? children : <Navigate to="/login" />; // If user is logged in, Rendering the children; otherwise, redirect to /login
 }
 
 // App component: The main entry point of the application
 function App() {
-    // Render the app with context providers, router, and routes
-    return (
-        // Wrap the app in UserProvider to provide user-related state and functions
-        <UserProvider>
-            // Wrap the app in CartProvider to provide cart-related state and functions
-            <CartProvider>
-                // Wrap the app in Router to enable routing
-                <Router>
-                    // Main container with Tailwind CSS classes for minimum height and background color
-                    <div className="min-h-screen bg-accent">
-                        // Render the Navbar component at the top of every page
-                        <Navbar />
-                        // Define the app's routes using Routes
-                        <Routes>
-                            // Route for the login page (public, no authentication required)
-                            <Route path="/login" element={<LoginPage />} />
-                            // Route for the homepage (public, no authentication required)
-                            <Route path="/" element={<HomePage />} />
-                            // Route for the cart page (protected, requires authentication)
-                            <Route path="/cart" element={<ProtectedRoute><CartPage /></ProtectedRoute>} />
-                            // Route for the confirmation page (protected, requires authentication)
-                            <Route path="/confirmation" element={<ProtectedRoute><ConfirmationPage /></ProtectedRoute>} />
-                            // Route for the history page (protected, requires authentication)
-                            <Route path="/history" element={<ProtectedRoute><HistoryPage /></ProtectedRoute>} />
-                        </Routes>
-                    </div>
-                    // Render the ToastContainer to display toast notifications throughout the app
-                    <ToastContainer position="top-right" autoClose={2000} /> // Position toasts in the top-right corner, auto-close after 2 seconds
-                </Router>
-            </CartProvider>
-        </UserProvider>
-    );
+  // Rendering the app with context providers, router, and routes
+  return (
+    <UserProvider> {/* Wrapping the app in UserProvider to provide user-related state and functions */}
+      <CartProvider> {/* Wrapping the app in CartProvider to provide cart-related state and functions */}
+        <Router> {/* Wrapping the app in Router to enable routing */}
+          <div className="min-h-screen bg-accent"> {/* Main container with Tailwind CSS classes for minimum height and background color */}
+            <Navbar /> {/* Rendering the Navbar component at the top of every page */}
+            <Routes> {/* Defining the app's routes using Routes */}
+              <Route path="/login" element={<LoginPage />} /> {/* Route for the login page (public, no authentication required) */}
+              <Route path="/" element={<HomePage />} /> {/* Route for the homepage (public, no authentication required) */}
+              <Route path="/cart" element={<ProtectedRoute><CartPage /></ProtectedRoute>} /> {/* Route for the cart page (protected, requires authentication) */}
+              <Route path="/confirmation" element={<ProtectedRoute><ConfirmationPage /></ProtectedRoute>} /> {/* Route for the confirmation page (protected, requires authentication) */}
+              <Route path="/history" element={<ProtectedRoute><HistoryPage /></ProtectedRoute>} /> {/* Route for the history page (protected, requires authentication) */}
+            </Routes>
+          </div>
+          <ToastContainer position="top-right" autoClose={2000} /> {/* Rendering the ToastContainer to display toast notifications throughout the app */}
+        </Router>
+      </CartProvider>
+    </UserProvider>
+  );
 }
 
 // Export the App component as the default export

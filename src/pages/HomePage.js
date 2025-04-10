@@ -4,7 +4,7 @@ import { useState, useContext } from 'react';
 
 // Importing React Router components for navigation
 // Link for creating navigation links (not used in this file but imported)
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 // Importing menu data from a local file
 // Static menu data containing items with properties like name, category, price, etc.

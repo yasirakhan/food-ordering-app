@@ -87,7 +87,7 @@ export const CartProvider = ({ children }) => {
     const saveOrder = (order, total, notes) => {
         if (!user) return; // Only save orders for logged-in users
         const timestamp = new Date().toISOString();
-        const userHistory = history[user.id] || []; // Generating a simple order ID (incrementing based on user's history length)
+        // const userHistory = history[user.id] || []; // Generating a simple order ID (incrementing based on user's history length)
         const orderId = uuidv4();
         // Assigning a random delivery partner
         const deliveryPartner =
@@ -115,8 +115,8 @@ export const CartProvider = ({ children }) => {
     // Simulating delivery status updates at different time intervals
     const simulateStatusUpdates = (orderId) => {
         const statusUpdates = [
-            { status: 'In Progress', delay: 3000 }, // 5 seconds
-            { status: 'Out for Delivery', delay: 6000 }, // 10 seconds
+            { status: 'In Progress', delay: 3000 }, // 3 seconds
+            { status: 'Out for Delivery', delay: 6000 }, // 6 seconds
             // { status: 'Delivered', delay: 15000 }, // 15 seconds
         ];
 
