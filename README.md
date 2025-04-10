@@ -52,10 +52,13 @@ food-ordering-app/
 │   │   └── Navbar.js         # Navigation bar component
 │   ├── contexts/             # Context for state management
 │   │   └── CartContext.js    # Cart state management
+|   |   └── UserContext.js    # User state management
 │   ├── pages/                # Page components
 │   │   ├── HomePage.js       # Homepage with menu and filtering
 │   │   ├── CartPage.js       # Cart page for managing items
 │   │   └── ConfirmationPage.js # Order confirmation page
+│   │   └── HistoryPage.js    # History page
+│   │   └── LoginPage.js      # Login page
 │   ├── data/                 # Mock data
 │   │   └── menuData.js       # Menu items data
 │   ├── App.js                # Main app component with routing
